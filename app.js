@@ -14,7 +14,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-function promptUser() {
+function promptManager() {
      inquirer.prompt([
         {
             type: "input",
@@ -33,31 +33,111 @@ function promptUser() {
         },
         {
             type: "input",
+            name: "officeNumber",
+            message: "What is your office number?"
+        },
+        {
+            type: "list",
             name: "Role",
-            message: "What is your Role?",
+            message: "Add another team member:",
             choices: [
                 "Employee",
-                "Manager",
                 "Engineer",
                 "Intern",
+                "I don't have anymore team members"
             ]
         },
     ]);
 }
+function promptEmployee() {
+    inquirer.prompt([
+       {
+           type: "input",
+           name: "name",
+           message: "What is your name?"
+       },
+       {
+           type: "input",
+           name: "id",
+           message: "What is your ID?"
+       },
+       {
+           type: "input",
+           name: "email",
+           message: "What is your email?"
+       }
+   ]);
+}
+function promptEngineer() {
+    inquirer.prompt([
+       {
+           type: "input",
+           name: "name",
+           message: "What is your name?"
+       },
+       {
+           type: "input",
+           name: "id",
+           message: "What is your ID?"
+       },
+       {
+           type: "input",
+           name: "email",
+           message: "What is your email?"
+       },
+       {
+           type: "input",
+           name: "github",
+           message: "What is your github username?"
+       },
+   ]);
+}
+function promptIntern() {
+    inquirer.prompt([
+       {
+           type: "input",
+           name: "name",
+           message: "What is your name?"
+       },
+       {
+           type: "input",
+           name: "id",
+           message: "What is your ID?"
+       },
+       {
+           type: "input",
+           name: "email",
+           message: "What is your email?"
+       },
+       {
+           type: "input",
+           name: "school",
+           message: "What school do you attend?"
+       },
+   ]);
+}
+
+//SWITCH CASE CODE
+switch (new User) {
+    case 0:
+      if (role = "Employee")
+      promptEmployee();
+    case 1:
+      if (role = "Engineer");
+      promptEngineer();
+    case 2:
+       if (role = "Intern");
+      promptIntern();
+}
 
 
-// promptUser()
-//     .then(function render() {
-//         const html = generateHTML(answers);
-
-//         return writeFileAsync("index.html", html);
-//     })
-//     .then(function () {
-//         console.log("Successfully wrote to index.html");
-//     })
-//     .catch(function (err) {
-//         console.log(err);
-//     });
+promptManager()
+    // .then(function () {
+    //     console.log(answers);
+    // })
+    // .catch(function (err) {
+    //     console.log(err);
+    // });
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
