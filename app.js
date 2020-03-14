@@ -17,7 +17,7 @@ const teamMembers = [];
 
 function buildTeamPage() {
     // Make this function and use fs to write file to output folder.
-    console.log(render(teamMembers));
+    // console.log(render(teamMembers));
 
     fs.writeFileSync(outputPath, render(teamMembers), 'utf-8');
 }
@@ -56,22 +56,22 @@ function promptManager() {
         {
             type: "input",
             name: "name",
-            message: "What is your name?"
+            message: "Manager Name:"
         },
         {
             type: "input",
             name: "id",
-            message: "What is your ID?"
+            message: "Manager ID:"
         },
         {
             type: "input",
             name: "email",
-            message: "What is your email?"
+            message: "Manager Email:"
         },
         {
             type: "input",
             name: "officeNumber",
-            message: "What is your office number?"
+            message: "Manager Office Number:"
         },
     ]).then(answers => {
         console.log({ answers });
@@ -91,22 +91,22 @@ function promptEngineer() {
         {
             type: "input",
             name: "name",
-            message: "What is name of Engineer?"
+            message: "Engineer Name:"
         },
         {
             type: "input",
             name: "id",
-            message: "What is Engineer ID?"
+            message: "Engineer ID:"
         },
         {
             type: "input",
             name: "email",
-            message: "What is Engingeer email?"
+            message: "Engineer Email:"
         },
         {
             type: "input",
             name: "github",
-            message: "What is Engineer github username?"
+            message: "Engineer GitHub Username:"
         },
     ])
         .then(answers => {
@@ -127,28 +127,30 @@ function promptIntern() {
         {
             type: "input",
             name: "name",
-            message: "What is your name?"
+            message: "Intern Name:"
         },
         {
             type: "input",
             name: "id",
-            message: "What is your ID?"
+            message: "Intern ID:"
         },
         {
             type: "input",
             name: "email",
-            message: "What is your email?"
+            message: "Intern Email:"
         },
         {
             type: "input",
             name: "school",
-            message: "What school do you attend?"
+            message: "Intern School:"
         },
     ])
         .then(answers => {
             console.log({ answers });
 
-            const newIntern = new Intern();
+            const { name, id, email, school } = answers;
+
+            const newIntern = new Intern(name, id, email, school);
 
             teamMembers.push(newIntern)
 
