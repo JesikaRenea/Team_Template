@@ -24,14 +24,13 @@
   
   * [Usage] n/a
   
-  * [License] Apache 2.0    [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-  
+  * [License] Apache 2.0 
   
   ---
   
   ## Badges
     
-  ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   
     
   ## Tests
@@ -39,8 +38,8 @@
 
 
  ## Screenshots of Application:
- ![InquirerPrompts](https://gyazo.com/195407dfb4f774ae62215173f38b5bd8)
- ![TeamHTML](https://gyazo.com/b726cb8a8ba9d3d5ba55feb65c7d87a1)
+ ![InquirerPrompts](/lib/node_ss.png)
+ ![TeamHTML](/lib/teamhtml_ss.png)
 
 
   ## For Questions Contact:
