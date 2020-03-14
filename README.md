@@ -37,9 +37,11 @@
   npm test
 
 
- ## Screenshots of Application:
+ ## Screenshots/GIF of Application:
  ![InquirerPrompts](/lib/node_ss.png)
  ![TeamHTML](/lib/teamhtml_ss.png)
+
+ [Link to Application Gif](https://drive.google.com/file/d/1MUPr7xSfQ9qdVK6nI-MbKxxCVaN1Vi7Z/view)
 
 
   ## For Questions Contact:
