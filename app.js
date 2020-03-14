@@ -132,7 +132,7 @@ function promptIntern() {
 
 
 promptManager()
-    .then(answers => {
+    .then(answers =>{
         console.log(answers);
     })
     .catch(function (err) {
