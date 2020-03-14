@@ -117,27 +117,28 @@ function promptIntern() {
    ]);
 }
 
-//SWITCH CASE CODE
-switch (new User) {
-    case 0:
-      if (role = "Employee")
-      promptEmployee();
-    case 1:
-      if (role = "Engineer");
-      promptEngineer();
-    case 2:
-       if (role = "Intern");
-      promptIntern();
-}
+// //SWITCH CASE CODE
+// switch (new User) {
+//     case 0:
+//       if (role = "Employee")
+//       promptEmployee();
+//     case 1:
+//       if (role = "Engineer");
+//       promptEngineer();
+//     case 2:
+//        if (role = "Intern");
+//       promptIntern();
+// }
 
 
 promptManager()
-    // .then(function () {
-    //     console.log(answers);
-    // })
-    // .catch(function (err) {
-    //     console.log(err);
-    // });
+    .then(function() {
+        console.log(answers);
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
