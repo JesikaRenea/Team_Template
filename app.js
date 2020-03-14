@@ -76,7 +76,9 @@ function promptManager() {
     ]).then(answers => {
         console.log({ answers });
 
-        const newManager = new Manager();
+        const { name, id, email, officeNumber } = answers;
+
+        const newManager = new Manager(name, id, email, officeNumber);
 
         teamMembers.push(newManager)
 
@@ -89,28 +91,30 @@ function promptEngineer() {
         {
             type: "input",
             name: "name",
-            message: "What is your name?"
+            message: "What is name of Engineer?"
         },
         {
             type: "input",
             name: "id",
-            message: "What is your ID?"
+            message: "What is Engineer ID?"
         },
         {
             type: "input",
             name: "email",
-            message: "What is your email?"
+            message: "What is Engingeer email?"
         },
         {
             type: "input",
             name: "github",
-            message: "What is your github username?"
+            message: "What is Engineer github username?"
         },
     ])
         .then(answers => {
             console.log({ answers });
 
-            const newEngineer = new Engineer(answer);
+            const { name, id, email, github } = answers;
+
+            const newEngineer = new Engineer(name, id, email, github);
 
             teamMembers.push(newEngineer)
 
@@ -140,16 +144,19 @@ function promptIntern() {
             name: "school",
             message: "What school do you attend?"
         },
-    ]);
+    ])
+        .then(answers => {
+            console.log({ answers });
+
+            const newIntern = new Intern();
+
+            teamMembers.push(newIntern)
+
+            addTeamMember();
+        });
 }
 
 promptManager();
-// .then(function () {
-//     console.log(answers);
-// })
-// .catch(function (err) {
-//     console.log(err);
-// });
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
