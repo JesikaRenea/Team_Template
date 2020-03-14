@@ -15,7 +15,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 function promptManager() {
-     inquirer.prompt([
+     return inquirer.prompt([
         {
             type: "input",
             name: "name",
@@ -50,7 +50,7 @@ function promptManager() {
     ]);
 }
 function promptEmployee() {
-    inquirer.prompt([
+    return inquirer.prompt([
        {
            type: "input",
            name: "name",
@@ -69,7 +69,7 @@ function promptEmployee() {
    ]);
 }
 function promptEngineer() {
-    inquirer.prompt([
+    return inquirer.prompt([
        {
            type: "input",
            name: "name",
@@ -93,7 +93,7 @@ function promptEngineer() {
    ]);
 }
 function promptIntern() {
-    inquirer.prompt([
+    return inquirer.prompt([
        {
            type: "input",
            name: "name",
